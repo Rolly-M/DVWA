@@ -2,24 +2,25 @@
 
 翻译：@[inVains](https://github.com/inVains) @[songzy12](https://github.com/songzy12) @[cnskis](https://github.com/cnskis)
 
-- - -
+---
 
 # 关于 DAMN VULNERABLE WEB APPLICATION（DVWA）
 
 Damn Vulnerable Web Application (DVWA)(译注：可以直译为："该死的"不安全Web应用程序)，是一个编码差的、易受攻击的 PHP/MySQL Web应用程序。 它的主要目的是帮助信息安全专业人员在合法的环境中，练习技能和测试工具，帮助 Web 开发人员更好地了解如何加强 Web 应用程序的安全性，并帮助学生和教师在可控的教学环境中了解和学习 Web 安全技术。
-    
+
 DVWA的目的是通过简单明了的界面来**练习一些最常见的 Web 漏洞**，所练习的漏洞具有**不同的难度级别**。 请注意，此软件**存在提示和无提示的漏洞**。 这是特意为止。 我们鼓励您依靠自己的能力尝试并发现尽可能多的安全问题。
-- - -
+
+---
 
 ## 警告！
 
-DVWA非常容易被攻击！  **不要将其上传到您的云服务器上对外公开的 web 文件夹中或任何在公网中的web服务器上**，否则服务器可能会被攻击。 建议使用虚拟机安装DVWA（如[VirtualBox](https://www.virtualbox.org/) 或[VMware](https://www.vmware.com/)），网络配置为NAT组网。在客机（guest machine）中，您可以下载并安装 [XAMPP](https://www.apachefriends.org/) 用作搭建DVWA的 Web 服务和数据库服务。
+DVWA非常容易被攻击！ **不要将其上传到您的云服务器上对外公开的 web 文件夹中或任何在公网中的web服务器上**，否则服务器可能会被攻击。 建议使用虚拟机安装DVWA（如[VirtualBox](https://www.virtualbox.org/) 或[VMware](https://www.vmware.com/)），网络配置为NAT组网。在客机（guest machine）中，您可以下载并安装 [XAMPP](https://www.apachefriends.org/) 用作搭建DVWA的 Web 服务和数据库服务。
 
 ### 免责声明
 
 我们不对任何人使用此应用程序 (DVWA) 的方式负责。 我们已经明确了应用程序的目的，该程序以及相关技术不应被恶意使用。 我们已警告并采取相关措施阻止用户将 DVWA 安装到生产环境的 Web 服务器上。 如果您的 Web 服务器因安装 DVWA 而被攻击，这不是我们的责任，而是由上传和安装它的人负责。
 
-- - -
+---
 
 ## 许可
 
@@ -31,7 +32,7 @@ Damn Vulnerable Web Application (DVWA) 的发布是为了希望它有用，但�
 
 您应该已经在Damn Vulnerable Web Application (DVWA)中收到一份GNU通用公共许可证副本。 如果没有，请参阅 <https://www.gnu.org/licenses/>。
 
-- - -
+---
 
 ## 国际化
 
@@ -41,19 +42,19 @@ Damn Vulnerable Web Application (DVWA) 的发布是为了希望它有用，但�
 
 如果您想贡献翻译，请提交 PR。 但是请注意，这并不意味着只是简单的通过谷歌翻译本文档并提交，这种提交将被拒绝接受。
 
-- - -
+---
 
 ## 下载
 
 虽然有各种版本的 DVWA，但唯一受支持的版本是来自官方 GitHub 存储仓库（repository）的最新源码。 你可以从 repo 中克隆它：
 
-``` 
+```
 git clone https://github.com/digininja/DVWA.git
-``` 
+```
 
 或者 [下载 ZIP 文件](https://github.com/digininja/DVWA/archive/master.zip)。
 
-- - -
+---
 
 ## 安装
 
@@ -64,7 +65,7 @@ git clone https://github.com/digininja/DVWA.git
 
 ### Windows + XAMPP 方式
 
-如果您没有配置 web 服务器，那么安装 DVWA 最简单的方法就是下载并安装 [XAMPP](https://www.apachefriends.org/) 
+如果您没有配置 web 服务器，那么安装 DVWA 最简单的方法就是下载并安装 [XAMPP](https://www.apachefriends.org/)
 
 XAMPP 可以非常方便快捷的在 Linux, Solaris, Windows and Mac OS X 上安装Apache WEB 服务器， XAMPP 中包含了 Apache web 服务器, MySQL数据库, PHP环境, Perl环境, 一个 FTP 服务器 和 phpMyAdmin服务.
 
@@ -109,7 +110,7 @@ DVWA 默认使用MySQL数据库而不是 MariaDB 数据库，但是我们强烈�
 
 配置数据库很简单, 在主菜单上单击 `Setup DVWA`, 然后单击 `Create / Reset Database`. 系统会创建 / 重置 数据库并插入其他数据。
 
-如果在创建数据库的时候报错, 务必确保在 `./config/config.inc.php` 中的配置信息是正确的。 *不同于 config.inc.php.dist, 后者只是示例文件，请根据实际情况进行配置。*
+如果在创建数据库的时候报错, 务必确保在 `./config/config.inc.php` 中的配置信息是正确的。 _不同于 config.inc.php.dist, 后者只是示例文件，请根据实际情况进行配置。_
 
 该文件的默认配置如下:
 
@@ -143,20 +144,20 @@ Query OK, 0 rows affected (0.00 sec)
 
 **文件夹权限**:
 
-* `./hackable/uploads/` - 需要授予 web 服务可写权限 (用作存储上传的文件).
-* `./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt` - 需要授予 web 服务可写权限 (如果您想使用PHPIDS的话).
+- `./hackable/uploads/` - 需要授予 web 服务可写权限 (用作存储上传的文件).
+- `./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt` - 需要授予 web 服务可写权限 (如果您想使用PHPIDS的话).
 
 **PHP 配置**:
 
-* `allow_url_include = on` - 允许包含远程文件 (RFI)   [[启用url-include](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-include)]
-* `allow_url_fopen = on` -  允许远程访问（就是请求http） (RFI)    [[启用url-fopen](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen)]
-* `safe_mode = off` - (如果 PHP 版本 <= v5.4) 允许SQL注入 (SQLi) [[安全模式](https://secure.php.net/manual/en/features.safe-mode.php)]
-* `magic_quotes_gpc = off` - (如果 PHP 版本 <= v5.4) 允许SQL注入 (SQLi) [[魔术引号](https://secure.php.net/manual/en/security.magicquotes.php)]
-* `display_errors = off` - (可选) 不显示PHP警告消息 [[关闭错误显示](https://secure.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)]
+- `allow_url_include = on` - 允许包含远程文件 (RFI) [[启用url-include](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-include)]
+- `allow_url_fopen = on` - 允许远程访问（就是请求http） (RFI) [[启用url-fopen](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen)]
+- `safe_mode = off` - (如果 PHP 版本 <= v5.4) 允许SQL注入 (SQLi) [[安全模式](https://secure.php.net/manual/en/features.safe-mode.php)]
+- `magic_quotes_gpc = off` - (如果 PHP 版本 <= v5.4) 允许SQL注入 (SQLi) [[魔术引号](https://secure.php.net/manual/en/security.magicquotes.php)]
+- `display_errors = off` - (可选) 不显示PHP警告消息 [[关闭错误显示](https://secure.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)]
 
 **`config/config.inc.php` 文件配置**:
 
-* `$_DVWA[ 'recaptcha_public_key' ]` & `$_DVWA[ 'recaptcha_private_key' ]` - 这里的值可以在此网址生成: https://www.google.com/recaptcha/admin/create
+- `$_DVWA[ 'recaptcha_public_key' ]` & `$_DVWA[ 'recaptcha_private_key' ]` - 这里的值可以在此网址生成: https://www.google.com/recaptcha/admin/create
 
 ### 默认用户与密码
 
@@ -170,18 +171,18 @@ _...很容易被破解 ;)_
 
 _注意: 根据DVWA实际安装位置自行调整。_
 
-- - -
+---
 
 ## Docker 容器配置
 
 _这一部分说明由 @thegrims 添加，有关Docker的问题或支持，请联系他们或 @opsxcq，他是Docker映像和repo的维护者。任何问题都可能会被指向此处并解决 _
 
 - [dockerhub 地址](https://hub.docker.com/r/vulnerables/web-dvwa/)
-`docker run --rm -it -p 80:80 vulnerables/web-dvwa`
+  `docker run --rm -it -p 80:80 vulnerables/web-dvwa`
 
 由于以前的MySQL问题，请确保您正在使用 aufs 。 执行 `docker info` 命令进行检查。 如果不是 aufs, 请改为 aufs， 每个操作系统都有修改的方法，且各个差异较大，此处不做赘述。
 
-- - -
+---
 
 ## 常见问题
 
@@ -205,7 +206,7 @@ Linux 系统是大小写敏感的，如果按下面的地址访问，都会提�
 
 所以在安装完以后, 如果打开网站提示 `404`, 检查文件是不是在 web 服务器的网站根目录下，然后确定大小写是否正确。
 
-### 安装中提示 "Access denied" 
+### 安装中提示 "Access denied"
 
 如果在安装过程中提示 Access denied ，请检查配置文件中的数据库账号密码是否正确:
 
@@ -231,7 +232,7 @@ SQL: Access denied for user 'dvwa'@'localhost' to database 'notdvwa'
 mysql -u dvwa -pp@ssw0rd -D dvwa
 ```
 
-*注: 参数-p后面没有空格*
+_注: 参数-p后面没有空格_
 
 如果看到以下提示信息，那么说明账号密码是正确的:
 
@@ -254,6 +255,7 @@ MariaDB [dvwa]>
 ```
 ERROR 1045 (28000): Access denied for user 'dvwa'@'localhost' (using password: YES)
 ```
+
 如果看到以下提示信息，说明当前使用的账号密码是正确的，但是没有访问当前数据库的权限。重新配置数据库，检查一下配置的数据库名是否正确。
 
 ```
@@ -288,37 +290,37 @@ Database Error #2054: The server requested authentication method unknown to the 
 
 1. 用 root 身份编辑该配置文件: `/etc/mysql/mysql.conf.d/mysqld.cnf`
 1. 在 `[mysqld]` 此行, 添加如下内容:
-  `default-authentication-plugin=mysql_native_password`
+   `default-authentication-plugin=mysql_native_password`
 1. 重启数据库，命令: `sudo service mysql restart`
 1. 查询数据库用户的身份认证方式:
 
-    ```sql
-    mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
-    +-----------+------------------+-----------------------+
-    | Host      | User             | plugin                |
-    +-----------+------------------+-----------------------+
-    | localhost | dvwa             | caching_sha2_password |
-    +-----------+------------------+-----------------------+
-    1 rows in set (0.00 sec)
-    ```
+   ```sql
+   mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
+   +-----------+------------------+-----------------------+
+   | Host      | User             | plugin                |
+   +-----------+------------------+-----------------------+
+   | localhost | dvwa             | caching_sha2_password |
+   +-----------+------------------+-----------------------+
+   1 rows in set (0.00 sec)
+   ```
 
 1. 如果显示的是 `caching_sha2_password`. 那么执行下面的命令:
 
-    ```sql
-    mysql> ALTER USER dvwa@localhost IDENTIFIED WITH mysql_native_password BY 'p@ssw0rd';
-    ```
+   ```sql
+   mysql> ALTER USER dvwa@localhost IDENTIFIED WITH mysql_native_password BY 'p@ssw0rd';
+   ```
 
 1. 再查一遍，应该显示的是 `mysql_native_password`.
 
-    ```sql
-    mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
-    +-----------+------+-----------------------+
-    | Host      | User | plugin                |
-    +-----------+------+-----------------------+
-    | localhost | dvwa | mysql_native_password |
-    +-----------+------+-----------------------+
-    1 row in set (0.00 sec)
-    ```
+   ```sql
+   mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
+   +-----------+------+-----------------------+
+   | Host      | User | plugin                |
+   +-----------+------+-----------------------+
+   | localhost | dvwa | mysql_native_password |
+   +-----------+------+-----------------------+
+   1 row in set (0.00 sec)
+   ```
 
 修改完成后，DVWA 安装程序应该可以正常进行。
 
@@ -348,7 +350,7 @@ sudo service mysql start
 
 ### 在 CentOS 上连不上数据库？
 
-很有可能是启用了 SELinux.  要么关闭 SELinux 要么执行下面的命令，以允许数据库访问:
+很有可能是启用了 SELinux. 要么关闭 SELinux 要么执行下面的命令，以允许数据库访问:
 
 ```
 setsebool -P httpd_can_network_connect_db 1
@@ -368,7 +370,8 @@ setsebool -P httpd_can_network_connect_db 1
 - 出现错误后的web容器中最后至少五行日志。
 - 如果是数据库认证问题，那就重新进行一遍上面的步骤，截图每一步。将这些截图与显示数据库用户和密码的配置文件部分的屏幕截图一起提交。
 - 对该问题的详细描述，你觉得会发生什么，以及你已经尽力去解决它。像 "登录失败" 不足以让我们明白您的问题出在哪里，也无法帮助您解决。
-- - -
+
+---
 
 ## SQLite3 SQL 注入
 
@@ -389,10 +392,10 @@ $_DVWA["SQLITE_DB"] = "sqli.db";
 
 可能出现的问题和 MySQL 差不多，唯一不同的是，当前数据库是SQLite3
 
-- - -
+---
 
 ## 关于
 
 项目地址: <https://github.com/digininja/DVWA>
 
-*DVWA 团队*
+_DVWA 团队_

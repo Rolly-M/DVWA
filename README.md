@@ -4,7 +4,8 @@ Damn Vulnerable Web Application (DVWA) is a PHP/MySQL web application that is da
 
 The aim of DVWA is to **practice some of the most common web vulnerabilities**, with **various levels of difficulty**, with a simple straightforward interface.
 Please note, there are **both documented and undocumented vulnerabilities** with this software. This is intentional. You are encouraged to try and discover as many issues as possible.
-- - -
+
+---
 
 ## WARNING!
 
@@ -14,7 +15,7 @@ Damn Vulnerable Web Application is damn vulnerable! **Do not upload it to your h
 
 We do not take responsibility for the way in which any one uses this application (DVWA). We have made the purposes of the application clear and it should not be used maliciously. We have given warnings and taken measures to prevent users from installing DVWA on to live web servers. If your web server is compromised via an installation of DVWA, it is not our responsibility, it is the responsibility of the person/s who uploaded and installed it.
 
-- - -
+---
 
 ## License
 
@@ -27,13 +28,13 @@ the Free Software Foundation, either version 3 of the License, or
 
 Damn Vulnerable Web Application (DVWA) is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Damn Vulnerable Web Application (DVWA).  If not, see <https://www.gnu.org/licenses/>.
+along with Damn Vulnerable Web Application (DVWA). If not, see <https://www.gnu.org/licenses/>.
 
-- - -
+---
 
 ## Internationalisation
 
@@ -44,7 +45,7 @@ This file is available in multiple languages:
 
 If you would like to contribute a translation, please submit a PR. Note though, this does not mean just run it through Google Translate and send that in, those will be rejected.
 
-- - -
+---
 
 ## Download
 
@@ -56,7 +57,7 @@ git clone https://github.com/digininja/DVWA.git
 
 Or [download a ZIP of the files](https://github.com/digininja/DVWA/archive/master.zip).
 
-- - -
+---
 
 ## Installation
 
@@ -110,7 +111,7 @@ The site will work with MySQL instead of MariaDB but we strongly recommend Maria
 
 To set up the database, simply click on the `Setup DVWA` button in the main menu, then click on the `Create / Reset Database` button. This will create / reset the database for you with some data in.
 
-If you receive an error while trying to create your database, make sure your database credentials are correct within `./config/config.inc.php`. *This differs from config.inc.php.dist, which is an example file.*
+If you receive an error while trying to create your database, make sure your database credentials are correct within `./config/config.inc.php`. _This differs from config.inc.php.dist, which is an example file._
 
 The variables are set to the following by default:
 
@@ -144,20 +145,20 @@ Depending on your Operating System, as well as version of PHP, you may wish to a
 
 **Folder Permissions**:
 
-* `./hackable/uploads/` - Needs to be writeable by the web service (for File Upload).
-* `./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt` - Needs to be writable by the web service (if you wish to use PHPIDS).
+- `./hackable/uploads/` - Needs to be writeable by the web service (for File Upload).
+- `./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt` - Needs to be writable by the web service (if you wish to use PHPIDS).
 
 **PHP configuration**:
 
-* `allow_url_include = on` - Allows for Remote File Inclusions (RFI)   [[allow_url_include](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-include)]
-* `allow_url_fopen = on` -  Allows for Remote File Inclusions (RFI)    [[allow_url_fopen](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen)]
-* `safe_mode = off` - (If PHP <= v5.4) Allows for SQL Injection (SQLi) [[safe_mode](https://secure.php.net/manual/en/features.safe-mode.php)]
-* `magic_quotes_gpc = off` - (If PHP <= v5.4) Allows for SQL Injection (SQLi) [[magic_quotes_gpc](https://secure.php.net/manual/en/security.magicquotes.php)]
-* `display_errors = off` - (Optional) Hides PHP warning messages to make it less verbose [[display_errors](https://secure.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)]
+- `allow_url_include = on` - Allows for Remote File Inclusions (RFI) [[allow_url_include](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-include)]
+- `allow_url_fopen = on` - Allows for Remote File Inclusions (RFI) [[allow_url_fopen](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen)]
+- `safe_mode = off` - (If PHP <= v5.4) Allows for SQL Injection (SQLi) [[safe_mode](https://secure.php.net/manual/en/features.safe-mode.php)]
+- `magic_quotes_gpc = off` - (If PHP <= v5.4) Allows for SQL Injection (SQLi) [[magic_quotes_gpc](https://secure.php.net/manual/en/security.magicquotes.php)]
+- `display_errors = off` - (Optional) Hides PHP warning messages to make it less verbose [[display_errors](https://secure.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)]
 
 **File: `config/config.inc.php`**:
 
-* `$_DVWA[ 'recaptcha_public_key' ]` & `$_DVWA[ 'recaptcha_private_key' ]` - These values need to be generated from: https://www.google.com/recaptcha/admin/create
+- `$_DVWA[ 'recaptcha_public_key' ]` & `$_DVWA[ 'recaptcha_private_key' ]` - These values need to be generated from: https://www.google.com/recaptcha/admin/create
 
 ### Default Credentials
 
@@ -171,18 +172,18 @@ Login URL: http://127.0.0.1/login.php
 
 _Note: This will be different if you installed DVWA into a different directory._
 
-- - -
+---
 
 ## Docker Container
 
 _This section of the readme was added by @thegrims, for support on Docker issues, please contact them or @opsxcq who is the maintainer of the Docker image and repo. Any issue tickets will probably be pointed at this and closed._
 
 - [dockerhub page](https://hub.docker.com/r/vulnerables/web-dvwa/)
-`docker run --rm -it -p 80:80 vulnerables/web-dvwa`
+  `docker run --rm -it -p 80:80 vulnerables/web-dvwa`
 
 Please ensure you are using aufs due to previous MySQL issues. Run `docker info` to check your storage driver. If it isn't aufs, please change it as such. There are guides for each operating system on how to do that, but they're quite different so we won't cover that here.
 
-- - -
+---
 
 ## Troubleshooting
 
@@ -232,7 +233,7 @@ If it matches what you expect, the next thing to do is to check you can log in a
 mysql -u dvwa -pp@ssw0rd -D dvwa
 ```
 
-*Note: There is no space after the -p*
+_Note: There is no space after the -p_
 
 If you see the following, the password is correct:
 
@@ -290,37 +291,37 @@ Alternatively, follow these steps:
 
 1. As root, edit the following file: `/etc/mysql/mysql.conf.d/mysqld.cnf`
 1. Under the line `[mysqld]`, add the following:
-  `default-authentication-plugin=mysql_native_password`
+   `default-authentication-plugin=mysql_native_password`
 1. Restart the database: `sudo service mysql restart`
 1. Check the authentication method for your database user:
 
-    ```sql
-    mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
-    +-----------+------------------+-----------------------+
-    | Host      | User             | plugin                |
-    +-----------+------------------+-----------------------+
-    | localhost | dvwa             | caching_sha2_password |
-    +-----------+------------------+-----------------------+
-    1 rows in set (0.00 sec)
-    ```
+   ```sql
+   mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
+   +-----------+------------------+-----------------------+
+   | Host      | User             | plugin                |
+   +-----------+------------------+-----------------------+
+   | localhost | dvwa             | caching_sha2_password |
+   +-----------+------------------+-----------------------+
+   1 rows in set (0.00 sec)
+   ```
 
 1. You'll likely see `caching_sha2_password`. If you do, run the following command:
 
-    ```sql
-    mysql> ALTER USER dvwa@localhost IDENTIFIED WITH mysql_native_password BY 'p@ssw0rd';
-    ```
+   ```sql
+   mysql> ALTER USER dvwa@localhost IDENTIFIED WITH mysql_native_password BY 'p@ssw0rd';
+   ```
 
 1. Re-running the check, you should now see `mysql_native_password`.
 
-    ```sql
-    mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
-    +-----------+------+-----------------------+
-    | Host      | User | plugin                |
-    +-----------+------+-----------------------+
-    | localhost | dvwa | mysql_native_password |
-    +-----------+------+-----------------------+
-    1 row in set (0.00 sec)
-    ```
+   ```sql
+   mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
+   +-----------+------+-----------------------+
+   | Host      | User | plugin                |
+   +-----------+------+-----------------------+
+   | localhost | dvwa | mysql_native_password |
+   +-----------+------+-----------------------+
+   1 row in set (0.00 sec)
+   ```
 
 After all that, the setup process should now work as normal.
 
@@ -350,7 +351,7 @@ Apache may not have high enough privileges to run commands on the web server. If
 
 ### Why can't the database connect on CentOS?
 
-You may be running into problems with SELinux.  Either disable SELinux or run this command to allow the web server to talk to the database:
+You may be running into problems with SELinux. Either disable SELinux or run this command to allow the web server to talk to the database:
 
 ```
 setsebool -P httpd_can_network_connect_db 1
@@ -371,7 +372,7 @@ If raising a ticket, please submit at least the following information:
 - If it is a database authentication problem, go through the steps above and screenshot each step. Submit these along with a screenshot of the section of the config file showing the database user and password.
 - A full description of what is going wrong, what you expect to happen, and what you have tried to do to fix it. "login broken" is no enough for us to understand your problem and to help fix it.
 
-- - -
+---
 
 ## SQLite3 SQL Injection
 
@@ -392,10 +393,10 @@ By default it uses the file `database/sqli.db`, if you mess it up, simply copy `
 
 The challenges are exactly the same as for MySQL, they just run against SQLite3 instead.
 
-- - -
+---
 
 ## Links
 
 Project Home: <https://github.com/digininja/DVWA>
 
-*Created by the DVWA team*
+_Created by the DVWA team_
