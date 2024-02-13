@@ -1,6 +1,5 @@
 /* All views: initial background and text color */
-body
-{
+body {
   background-color: #fff;
   color: #2e3436;
   font-family: arial, helvetica, sans-serif;
@@ -10,29 +9,25 @@ body
 }
 
 /* All views: standard link format*/
-a:link
-{
+a:link {
   color: #2e3436;
   text-decoration: underline;
 }
 
 /* All views: standard link - visited format */
-a:visited
-{
+a:visited {
   color: #2e3436;
   text-decoration: underline;
 }
 
 /* All views: standard link - activated format */
-a:active
-{
+a:active {
   color: #2e3436;
   text-decoration: underline;
 }
 
 /* All views: main title format */
-td.title
-{
+td.title {
   text-align: center;
   padding: 10px;
   font-family: sans-serif;
@@ -42,8 +37,7 @@ td.title
 }
 
 /* All views: header item format */
-td.headerItem
-{
+td.headerItem {
   text-align: right;
   padding-right: 6px;
   font-family: sans-serif;
@@ -51,16 +45,14 @@ td.headerItem
 }
 
 /* All views: header item value format */
-td.headerValue
-{
+td.headerValue {
   text-align: left;
   font-family: sans-serif;
   font-weight: bold;
 }
 
 /* All views: header legend item format */
-td.legendItem
-{
+td.legendItem {
   text-align: right;
   padding-right: 6px;
   padding-top: 10px;
@@ -70,25 +62,22 @@ td.legendItem
 }
 
 /* All views: header legend item value format */
-td.legendValue
-{
+td.legendValue {
   text-align: left;
   padding-top: 10px;
   padding-bottom: 2px;
-  color:  #2e3436;
+  color: #2e3436;
   font-family: sans-serif;
   font-weight: bold;
 }
 
 /* All views: color of horizontal ruler */
-td.ruler
-{
+td.ruler {
   background-color: #d3d7cf;
 }
 
 /* All views: version string format */
-td.versionInfo
-{
+td.versionInfo {
   text-align: center;
   padding-top: 2px;
   font-family: sans-serif;
@@ -97,8 +86,7 @@ td.versionInfo
 
 /* Directory view/File view (all)/Test case descriptions:
 table headline format */
-td.tableHead
-{
+td.tableHead {
   text-align: center;
   color: #ffffff;
   background-color: #555753;
@@ -107,8 +95,9 @@ td.tableHead
 }
 
 /* Directory view/File view (all): filename entry format */
-td.coverItem, td.coverDirectory, td.coverFile
-{
+td.coverItem,
+td.coverDirectory,
+td.coverFile {
   text-align: left;
   padding-left: 10px;
   padding-right: 20px;
@@ -116,29 +105,25 @@ td.coverItem, td.coverDirectory, td.coverFile
   font-family: monospace;
 }
 
-td.coverDirectory
-{
+td.coverDirectory {
   font-weight: bold;
 }
 
 /* Directory view/File view (all): bar-graph entry format*/
-td.coverBar
-{
+td.coverBar {
   padding-left: 10px;
   padding-right: 10px;
   background-color: #d3d7cf;
 }
 
 /* Directory view/File view (all): bar-graph outline color */
-td.coverBarOutline
-{
+td.coverBarOutline {
   background-color: #2e3436;
 }
 
 /* Directory view/File view (all): percentage entry for files with
 high coverage rate */
-td.coverPerHi
-{
+td.coverPerHi {
   text-align: right;
   padding-left: 10px;
   padding-right: 10px;
@@ -148,8 +133,7 @@ td.coverPerHi
 
 /* Directory view/File view (all): line count entry for files with
 high coverage rate */
-td.coverNumHi
-{
+td.coverNumHi {
   text-align: right;
   padding-left: 10px;
   padding-right: 10px;
@@ -159,8 +143,7 @@ td.coverNumHi
 
 /* Directory view/File view (all): legend entry for high coverage
 rate */
-span.coverLegendHi
-{
+span.coverLegendHi {
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -169,8 +152,7 @@ span.coverLegendHi
 
 /* Directory view/File view (all): percentage entry for files with
 medium coverage rate */
-td.coverPerMed
-{
+td.coverPerMed {
   text-align: right;
   padding-left: 10px;
   padding-right: 10px;
@@ -180,8 +162,7 @@ td.coverPerMed
 
 /* Directory view/File view (all): line count entry for files with
 medium coverage rate */
-td.coverNumMed
-{
+td.coverNumMed {
   text-align: right;
   padding-left: 10px;
   padding-right: 10px;
@@ -191,8 +172,7 @@ td.coverNumMed
 
 /* Directory view/File view (all): legend entry for medium coverage
 rate */
-span.coverLegendMed
-{
+span.coverLegendMed {
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -204,8 +184,7 @@ span.coverLegendMed
 
 /* Directory view/File view (all): percentage entry for files with
 low coverage rate */
-td.coverPerLo
-{
+td.coverPerLo {
   text-align: right;
   padding-left: 10px;
   padding-right: 10px;
@@ -215,8 +194,7 @@ td.coverPerLo
 
 /* Directory view/File view (all): line count entry for files with
 low coverage rate */
-td.coverNumLo
-{
+td.coverNumLo {
   text-align: right;
   padding-left: 10px;
   padding-right: 10px;
@@ -226,8 +204,7 @@ td.coverNumLo
 
 /* Directory view/File view (all): legend entry for low coverage
 rate */
-span.coverLegendLo
-{
+span.coverLegendLo {
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -236,26 +213,22 @@ span.coverLegendLo
 }
 
 /* File view (all): "show/hide details" link format */
-a.detail:link
-{
+a.detail:link {
   color: #ffffff;
 }
 
 /* File view (all): "show/hide details" link - visited format */
-a.detail:visited
-{
+a.detail:visited {
   color: #ffffff;
 }
 
 /* File view (all): "show/hide details" link - activated format */
-a.detail:active
-{
+a.detail:active {
   color: #ffffff;
 }
 
 /* File view (detail): test name table headline format */
-td.testNameHead
-{
+td.testNameHead {
   text-align: left;
   padding-left: 10px;
   background-color: #729fcf;
@@ -264,8 +237,7 @@ td.testNameHead
 }
 
 /* File view (detail): test lines table headline format */
-td.testLinesHead
-{
+td.testLinesHead {
   text-align: center;
   background-color: #729fcf;
   font-family: sans-serif;
@@ -273,16 +245,14 @@ td.testLinesHead
 }
 
 /* File view (detail): test name entry */
-td.testName
-{
+td.testName {
   text-align: left;
   padding-left: 10px;
   background-color: #729fcf;
 }
 
 /* File view (detail): test percentage entry */
-td.testPer
-{
+td.testPer {
   text-align: right;
   vertical-align: top;
   padding-left: 10px;
@@ -291,8 +261,7 @@ td.testPer
 }
 
 /* File view (detail): test lines count entry */
-td.testNum
-{
+td.testNum {
   text-align: right;
   vertical-align: top;
   padding-left: 10px;
@@ -302,15 +271,13 @@ td.testNum
 }
 
 /* Test case descriptions: test name format*/
-dt
-{
+dt {
   font-family: sans-serif;
   font-weight: bold;
 }
 
 /* Test case descriptions: description table body */
-td.testDescription
-{
+td.testDescription {
   padding-top: 10px;
   padding-left: 30px;
   padding-bottom: 10px;
@@ -319,15 +286,13 @@ td.testDescription
 }
 
 /* Source code view: source code format */
-pre.source
-{
+pre.source {
   font-family: monospace;
   white-space: pre;
 }
 
 /* Source code view: line number format */
-span.lineNum
-{
+span.lineNum {
   background-color: #d3d7cf;
 }
 
@@ -336,14 +301,12 @@ span.lineNum a {
 }
 
 /* Source code view: format for lines which were executed */
-span.lineCov
-{
+span.lineCov {
   background-color: #8ae234;
 }
 
 /* Source code view: format for Cov legend */
-span.LegendCov
-{
+span.LegendCov {
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -352,14 +315,12 @@ span.LegendCov
 }
 
 /* Source code view: format for lines which were not executed */
-span.lineNoCov
-{
+span.lineNoCov {
   background-color: #f57900;
 }
 
 /* Source code view: format for NoCov legend */
-span.LegendNoCov
-{
+span.LegendNoCov {
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -368,14 +329,12 @@ span.LegendNoCov
 }
 
 /* Source code view: format for lines which are dead code */
-span.lineDeadCode
-{
+span.lineDeadCode {
   background-color: #d3d7cf;
 }
 
 /* Source code view: format for NoCov legend */
-span.LegendDeadCode
-{
+span.LegendDeadCode {
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -384,25 +343,21 @@ span.LegendDeadCode
 }
 
 /* Test view: format for tests which have passed */
-li.testPassed
-{
+li.testPassed {
 }
 
 /* Test view: format for tests which failed */
-li.testFailure
-{
+li.testFailure {
   background-color: #f57900;
 }
 
 /* Test view: format for tests which failed with an error */
-li.testError
-{
+li.testError {
   background-color: #f57900;
 }
 
 /* Test view: format for incomplete and skipped tests */
-li.testIncomplete
-{
+li.testIncomplete {
   background-color: #fcaf3e;
 }
 

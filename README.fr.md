@@ -3,7 +3,7 @@
 Philibert Gentil：@[Philibert-Gentil](https://github.com/Philibert-Gentil)
 Vous pouvez me contacter en cas d'erreur de traduction / d'interprétation.
 
-- - -
+---
 
 # DAMN VULNERABLE WEB APPLICATION / BORDEL D'APPLICATION WEB VULNÉRABLE
 
@@ -11,7 +11,8 @@ Bordel d'application web vulnérable (BAWV, traduit DVWA) est une application we
 
 L'objectif de BAWV est **d'expérimenter les vulnérabilités web les plus communes**, avec **différents niveaux de difficulté**, avec une interface intuitive.
 Notez qu'il existe des **vulnérabilités documentées ou non** avec ce programme. C'est intentionnel. Vous êtes encourragés à essayer et découvrir autant de failles que possible.
-- - -
+
+---
 
 ## ATTENTION !
 
@@ -20,7 +21,8 @@ Bordel D'application web vulnérable est vachement vulnérable ! **Ne la publiez
 ### Non-responsabilité
 
 Nous ne sommes pas responsables de la manière dont vous utilisez BAWV. Nous avons clairement défini les objectifs de l'application et elle ne dois pas être utilisée de manière malveillante. Nous vous avons averti et avons pris les mesures nécessaires pour informer les utilisateurs de BAWV à propos de son installation sur un serveur. Si votre serveur est compromis à cause d'une installation de BAWV, il n'en découle pas de notre responsabilité, mais de celle de la/les personne(s) qui l'a/ont téléchargé ou installé, envoyé.
-- - -
+
+---
 
 ## License
 
@@ -36,18 +38,20 @@ Voyez la license publique générale GNU pour plus de détails.
 
 Vous devriez avoir reçu une copie de la license publique générale GNU
 en même temps que le bordel d'application web vulnérable (BAVW). Sinon, consultez <https://www.gnu.org/licenses/>.
-- - -
+
+---
 
 ## Internationalisation
 
 Ce fichier est disponibles dans diverses langues ci-dessous :
+
 - Chinois: [简体中文](README.zh.md)
 - Turque: [Türkçe](README.tr.md)
 - Anglais: [English](README.md)
 
 Si vous souhaitez contribuer à la traduction, faite une demande d'extraction (pull request, PR). Par contre, ça ne doit pas être juste du Google Trad, ou ce sera rejeté.
 
-- - -
+---
 
 ##Téléchargement
 
@@ -58,13 +62,15 @@ git clone https://github.com/digininja/DVWA.git
 ```
 
 Ou [télécharger le fichier zippé](https://github.com/digininja/DVWA/archive/master.zip).
-- - -
+
+---
 
 ## Installation
 
 **Soyez sûrs que le fichier config/config.inc.php existe. Avoir le fichier config.inc.php.dist ne suffira pas, vous devrez le modifier par rapport à votre environnement et le renommer config.inc.php. [Windows cachera peut-être l'extension](https://lecrabeinfo.net/afficher-extensions-noms-de-fichiers-dans-windows.html)**
 
 ## Vidéos d'installation
+
 - (en anglais) [Installing DVWA on Kali running in VirtualBox](https://www.youtube.com/watch?v=WkyDxNJkgQ4)
 - (En anglais) [Installing Damn Vulnerable Web Application (DVWA) on Windows 10](https://www.youtube.com/watch?v=cak2lQvBRAo) \[12:39 minutes\]
 
@@ -104,7 +110,7 @@ Le site fonctionnera avec MySQL à la place de MariaDB mais nous recommendons fo
 
 Pour créer une base de données (BDD), cliquez simplement sur le bouton `Setup DVWA` (configurer BAWV) dans le menu principal puis cliquez sur le bouton `Create / Reset Database` (créez / réinitialisez la BDD). Cela créera / réinitialisera la BDD pour vous avec des données dedans.
 
-Si vous rencontrez une erreur en essayant de créer la BDD, soyez sûrs que les identifiants de la BDD soient corrects dans `./config/config.inc.php`. *Elles diffèrent de config.inc.php.dist, qui est un fichier bateau*.
+Si vous rencontrez une erreur en essayant de créer la BDD, soyez sûrs que les identifiants de la BDD soient corrects dans `./config/config.inc.php`. _Elles diffèrent de config.inc.php.dist, qui est un fichier bateau_.
 
 Les variables sont définies comme ceci par défaut:
 
@@ -138,20 +144,20 @@ En fonction de votre système d'exploitaiton (SE), tout comme la version de PHP,
 
 **Permissions du fichier**
 
-* `./hackable/uploads/` - Doit être disponible en écriture par le serveur web (des fichiers y seront uploadés).
-* `./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt` - Doit être disponible en écriture par le serveur web (si vous voulez utiliser les PHPIDS).
+- `./hackable/uploads/` - Doit être disponible en écriture par le serveur web (des fichiers y seront uploadés).
+- `./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt` - Doit être disponible en écriture par le serveur web (si vous voulez utiliser les PHPIDS).
 
 **Configuration PHP**
 
-* `allow_url_include = on` - Autorise l'utilisation du gestionnaire des URL par certaines fonctions (RFI)   [[allow_url_include](https://secure.php.net/manual/fr/filesystem.configuration.php#ini.allow-url-include)]
-* `allow_url_fopen = on` -  Autorisation pour l'accès au fichiers (RFI)    [[allow_url_fopen](https://secure.php.net/manual/fr/filesystem.configuration.php#ini.allow-url-fopen)]
-* `safe_mode = off` - (Si PHP <= v5.4) Autorise l'injection SQL (SQLi) [[safe_mode](https://secure.php.net/manual/fr/features.safe-mode.php)]
-* `magic_quotes_gpc = off` - (Si PHP <= v5.4) Autorise l'injection SQL (SQLi) [[magic_quotes_gpc](https://secure.php.net/manual/fr/security.magicquotes.php)]
-* `display_errors = off` - (Optional) Cache les messages d'avertissement PHP [[display_errors](https://secure.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)]
+- `allow_url_include = on` - Autorise l'utilisation du gestionnaire des URL par certaines fonctions (RFI) [[allow_url_include](https://secure.php.net/manual/fr/filesystem.configuration.php#ini.allow-url-include)]
+- `allow_url_fopen = on` - Autorisation pour l'accès au fichiers (RFI) [[allow_url_fopen](https://secure.php.net/manual/fr/filesystem.configuration.php#ini.allow-url-fopen)]
+- `safe_mode = off` - (Si PHP <= v5.4) Autorise l'injection SQL (SQLi) [[safe_mode](https://secure.php.net/manual/fr/features.safe-mode.php)]
+- `magic_quotes_gpc = off` - (Si PHP <= v5.4) Autorise l'injection SQL (SQLi) [[magic_quotes_gpc](https://secure.php.net/manual/fr/security.magicquotes.php)]
+- `display_errors = off` - (Optional) Cache les messages d'avertissement PHP [[display_errors](https://secure.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)]
 
 **Fichier: `config/config.inc.php`**:
 
-* `$_DVWA[ 'recaptcha_public_key' ]` & `$_DVWA[ 'recaptcha_private_key' ]` - Ces valeurs doivent être générées depuis: https://www.google.com/recaptcha/admin/create
+- `$_DVWA[ 'recaptcha_public_key' ]` & `$_DVWA[ 'recaptcha_private_key' ]` - Ces valeurs doivent être générées depuis: https://www.google.com/recaptcha/admin/create
 
 ### Identifiants par défaut
 
@@ -162,16 +168,19 @@ En fonction de votre système d'exploitaiton (SE), tout comme la version de PHP,
 _... peut être facilement craqué ;)_
 URL de connection: http://127.0.0.1/login.php
 _PS: Ce sera différent si vous installez BAWV dans un autre fichier._
-- - -
+
+---
 
 ## Container Docker
+
 _Cette section du fichier à été ajouté par @thegrims, pour de l'aide à propos d'erreurs docker, veuillez le contacter ou contactez @opsxcq, qui est le maître du dépôt et de l'image docker. Un signalement d'erreur lui sera sûrement adressé et celle-ci sera collematée_
 
 - [page dockerhub](https://hub.docker.com/r/vulnerables/web-dvwa/)
-`docker run --rm -it -p 80:80 vulnerables/web-dvwa`
+  `docker run --rm -it -p 80:80 vulnerables/web-dvwa`
 
 Soyez sûrs d'utiliser AUFS à cause d'erreurs antérieurs de MySQL. Lancez `docker info` pour vérifier le stockage de votre lecteur. Si il n'est pas en AUFS, veuillez le changer. Il y a un manuel pour chaque SE (OS), mais il sont tellement différents que nous n'aborderons pas ce sujet.
-- - -
+
+---
 
 ## Dépannage
 
@@ -185,6 +194,7 @@ Si vous créer un dossier et que vous y mettez un fichier - `/var/www/html/mondo
 
 Linux est sensible à la casse (par exemps, "é" n'est pas la même lettre que "e"; et "E" n'est pas lettre que "e"), donc vous pourriez tomber sur un 404 si vous n'y prenez pas garde.
 Les URL suivantes vous donneront une erreur 404 :
+
 - `http://localhost/MonDossier/salut.txt`
 - `http://localhost/mondossier/Salut.txt`
 - `http://localhost/MONDOSSIER/salut.txt`
@@ -225,6 +235,7 @@ mysql -u dvwa -p -D dvwa
 ```
 
 Si le texte suivant apparaît (peut varier), les identifiants sont corrects:
+
 ```
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 14
@@ -236,9 +247,11 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 MariaDB [dvwa]>
 ```
+
 Puisque vous pouvez vous connecter en ligne de commande, il y a quelque chose qui cloche dans le fichier de configuration, re-vérifiez-le et signaler nus une erreur si vous n'arrivez pas à la trouver (sur github).
 
 Si le texte qui est apparu est le suivant, les identifiants sont incorrects. Répétez la [configuration de la base de données](#Paramétrage de la base de données) et soyez sûrs d'utiliser toujours les même identifiants durant la procédure.
+
 ```
 ERROR 1045 (28000): Access denied for user 'dvwa'@'localhost' (using password: YES)
 //signifie: "Erreur 1045 (28000): Accès refusé pour l'utilisateur 'dvwa'@'localhost' (clé renseignée: OUI)"
@@ -246,16 +259,20 @@ ERROR 1045 (28000): Access denied for user 'dvwa'@'localhost' (using password: Y
 
 Si vous obtenez l'erreur suivante, les identifiants sont corrects mais l'utilisateur n'a pas accès à la database.
 Réitérez aussi le paramétrage de la base de données et vérifiez le nom de la base de données.
+
 ```
 ERROR 1044 (42000): Access denied for user 'dvwa'@'localhost' to database 'dvwa'
 //signifie: "Erreur 1044 (42000): Accès refusé pour l'utilisateur 'dvwa'@'localhost' à la BDD 'dvwa'."
 ```
 
 La dèrnière erreur peut être celle-ci:
+
 ```
 ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
 ```
+
 Ça n'est pas une erreur d'authentification, c'est juste que le système de gestion de la BDD n'est pas activée. Démarrez-le en tapant :
+
 ```sh
 sudo service mysql start
 ```
@@ -263,6 +280,7 @@ sudo service mysql start
 ### Méthode d'identification inconnue
 
 Avec les versions les plus récentes de MySQL, PHP ne peut plus échanger avec la BDD dans sa configuration initiale. Si vous obtenez cette erreur, c'est que vous possédez cette configuration :(.
+
 ```
 Database Error #2054: The server requested authentication method unknown to the client.
 //Signification: "Erreur de BDD  #2045: la méthode authentification utilisée est inconnue."
@@ -286,30 +304,32 @@ Sinon, suivez ces étapes:
     | localhost | dvwa             | caching_sha2_password |
     +-----------+------------------+-----------------------+
     1 rows in set (0.00 sec)
-    ```
+   ```
 1. Vous verrez probablement `caching_sha2_password`. Si c'est le cas, tapez:
    ```sql
     mysql> ALTER USER dvwa@localhost IDENTIFIED WITH mysql_native_password BY 'p@ssw0rd';
-    ```
+   ```
 1. Relancez la vérification, vous devriez voir `mysql_native_password`.
-    ```sql
-    mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
-    +-----------+------+-----------------------+
-    | Host      | User | plugin                |
-    +-----------+------+-----------------------+
-    | localhost | dvwa | mysql_native_password |
-    +-----------+------+-----------------------+
-    1 row in set (0.00 sec)
-    ```
-Après tout ça, le processus de configuration devrait fonctionner.
-Pour plus d'infos, voyez: <https://www.php.net/manual/fr/mysqli.requirements.php>.
+   `sql
+mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
++-----------+------+-----------------------+
+| Host      | User | plugin                |
++-----------+------+-----------------------+
+| localhost | dvwa | mysql_native_password |
++-----------+------+-----------------------+
+1 row in set (0.00 sec)
+`
+   Après tout ça, le processus de configuration devrait fonctionner.
+   Pour plus d'infos, voyez: <https://www.php.net/manual/fr/mysqli.requirements.php>.
 
 ### Database Error #2002: No such file or directory.
 
 Le serveur de BDD est inactif. Sur une distro basée Debian, tapez:
+
 ```sh
 sudo service mysql start
 ```
+
 ### Erreurs "MySQL server has gone away" et "Packets out of order"
 
 Vous pourriez rencontrer cette erreur pour maintes raisons, mais la plus plausible est que la version de votre SGBDD est incompatible avec PHP.
@@ -322,6 +342,7 @@ Apache n'a peut être pas assez de privilèges sur le serveur web. Si vous utili
 ### Pourquoi ne puis-je pas me connecter à ma BDD sous CentOS
 
 Vous avez sûrement des prolèmes avec SELinux. Désinstaller SELinux ou lancez cette commande pour autoriser le serveur web à discutter avec la base de donnée:
+
 ```
 setsebool -P httpd_can_network_connect_db 1
 ```
@@ -334,11 +355,13 @@ Si vous avez besoin d'aide, lisez les rapports d'erreurs ouvert et/ou fermés da
 Avant d'envoyer un rapport, soyez-sûr que vous utilisez la dernière version du code du dépôt. Pas que la dernière version, mais aussi les derniers codes de la branche maîtresse (master).
 
 Si vous envoyez un rapport, renseignez ces informations:
+
 - Système d'exploitation
 - Les cinq dernières lignes du journal (log) du serveur web juste après la déclaration de votre erreur
 - Si c'est un problème de connection à la base de données, effectuées les étapes renseignées au dessus et faites une capture d'écran de chacune d'entre elles, et du fichier de configuration contenant vos identifiants.
 - une description détaillée de ce qui ne va pas, ce que vous éspèreriez qu'il arrive, et comment vous avez essayé de résoudre le problème. "problème de connection" n'est pas assez détaillé pour nous aidez à résoudre votre problème.
-- - -
+
+---
 
 ## Injection SQL SQLite3
 
@@ -353,10 +376,12 @@ Pour faire ce changement éditez le fichier de configuration et éditez ces lign
 $_DVWA["SQLI_DB"] = "sqlite";
 $_DVWA["SQLITE_DB"] = "sqli.db";
 ```
+
 Par défaut, ça utilise le fichier `database/sqli.db`, si vous vous gourrez, copiez `database/sqli.db.dist` par dessus.
 
 Le challenge est le même pour MySQL, il sont juste antagoniste à SQLite3.
-- - -
+
+---
 
 ## Liens
 

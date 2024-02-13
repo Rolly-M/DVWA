@@ -3,7 +3,8 @@
 Damn Vulnerable Web Application (DVWA), son derece zafiyetli bir PHP/MySQL web uygulamasıdır. Temel amacı; güvenlik uzmanlarına, yeteneklerini ve araçlarını test etmeleri konusunda yasal bir ortam sunmak, web geliştiricilerinin web uygulamalarının güvenliğini sağlama süreçlerini daha iyi anlamalarına yardımcı olmak, öğrencilere ve eğitmenlere web uygulamalarının güvenliğini öğrenme/öğretme konusunda kontrollü bir sınıf ortamı sunmaktır.
 
 DVWA, **en yaygın web zafiyetlerinden bazılarının** basit bir arayüz üzerinden **farklı zorluk seviyelerinde denenmesini** hedefler. Bu uygulamada, **dokümante edilmiş ve edilmemiş** zafiyetler olduğunu hatırlatmakta fayda var. Mümkün mertebe fazla problemi deneyin ve keşfedin!
-- - -
+
+---
 
 ## UYARI!
 
@@ -13,7 +14,7 @@ Damn Vulnerable Web Application epey zafiyetlidir! **Internet üzerinden erişil
 
 Herhangi bir kişinin bu uygulamayı (DVWA) nasıl kullandığı konusunda sorumluluk kabul etmiyoruz. Uygulamanın amaçlarını açıkça ifade ettik, bu uygulama kötü amaçlarla kullanılmamalıdır. Kullanıcıların, DVWA'yı canlı ortamdaki web sunucularına yüklemelerine engel olmak için uyarılarda bulunduk ve önlemler aldık. Web sunucunuz, bir DVWA kurulumu nedeniyle tehlikeye düştüyse, bu bizim sorumluluğumuz değildir. Uygulamayı yükleyen ve kuran kişi ya da kişilerin sorumluluğudur.
 
-- - -
+---
 
 ## Lisans
 
@@ -30,7 +31,7 @@ Detaylı bilgi için GNU Genel Kamu Lisansı'nı inceleyiniz.
 Damn Vulnerable Web Application (DVWA) ile birlikte, GNU Genel Kamu Lisansı'nın da bir kopyasını
 edinmiş olmalısınız. Durum böyle değilse, <https://www.gnu.org/licenses/> sayfasını inceleyiniz.
 
-- - -
+---
 
 ## Uluslararasılaştırma
 
@@ -41,7 +42,7 @@ Bu dosya, birden fazla dilde mevcuttur:
 
 Çeviri katkısında bulunmak istiyorsanız lütfen PR açın. Ancak dikkat edin; bu, dosyayı Google Translate'ten geçirip göndermeniz anlamına gelmemektedir. Bu tür talepler reddedilecektir.
 
-- - -
+---
 
 ## İndirme
 
@@ -53,7 +54,7 @@ git clone https://github.com/digininja/DVWA.git
 
 ya da [ZIP olarak indirebilirsiniz](https://github.com/digininja/DVWA/archive/master.zip).
 
-- - -
+---
 
 ## Kurulum
 
@@ -86,7 +87,7 @@ Site, MariaDB yerine MySQL ile çalışacak. Ancak kullanıma hazır geldiği i�
 
 Veri tabanını ayağa kaldırmak için, önce ana menüdeki `Setup DVWA` butonuna, sonra da `Create / Reset Database` butonuna tıklayın. Bu işlem sizin için, içinde bir miktar veri ile birlikte veri tabanını oluşturacak ya da veri tabanınızı sıfırlayacaktır.
 
-Eğer veri tabanını oluşturma sırasında bir hata ile karşılaşırsanız, `./config/config.inc.php` dosyasındaki veri tabanı giriş bilgilerinin doğru olduğundan emin olun. *Bu, sadece bir örnek dosya olan config.inc.php.dist dosyasından farklıdır.*
+Eğer veri tabanını oluşturma sırasında bir hata ile karşılaşırsanız, `./config/config.inc.php` dosyasındaki veri tabanı giriş bilgilerinin doğru olduğundan emin olun. _Bu, sadece bir örnek dosya olan config.inc.php.dist dosyasından farklıdır._
 
 Değişkenler, varsayılan olarak aşağıdaki gibi ayarlanmıştır:
 
@@ -120,20 +121,20 @@ Query OK, 0 rows affected (0.00 sec)
 
 **Dizin İzinleri**:
 
-* `./hackable/uploads/` - Web servisi tarafından yazılabilir olmalıdır (dosya yüklemeleri için).
-* `./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt` - Web servisi tarafından yazılabilir olmalıdır (PHPIDS kullanmak istiyorsanız).
+- `./hackable/uploads/` - Web servisi tarafından yazılabilir olmalıdır (dosya yüklemeleri için).
+- `./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt` - Web servisi tarafından yazılabilir olmalıdır (PHPIDS kullanmak istiyorsanız).
 
 **PHP yapılandırması**:
 
-* `allow_url_include = on` - Remote File Inclusions'a (RFI) izin verir [[allow_url_include](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-include)]
-* `allow_url_fopen = on` - Remote File Inclusions'a (RFI) izin verir [[allow_url_fopen](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen)]
-* `safe_mode = off` - (PHP <= v5.4 için) SQL Injection'a (SQLi) izin verir [[safe_mode](https://secure.php.net/manual/en/features.safe-mode.php)]
-* `magic_quotes_gpc = off` - (PHP <= v5.4 için) SQL Injection'a (SQLi) izin verir [[magic_quotes_gpc](https://secure.php.net/manual/en/security.magicquotes.php)]
-* `display_errors = off` - (İsteğe bağlı) PHP uyarı mesajlarını gizler [[display_errors](https://secure.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)]
+- `allow_url_include = on` - Remote File Inclusions'a (RFI) izin verir [[allow_url_include](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-include)]
+- `allow_url_fopen = on` - Remote File Inclusions'a (RFI) izin verir [[allow_url_fopen](https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen)]
+- `safe_mode = off` - (PHP <= v5.4 için) SQL Injection'a (SQLi) izin verir [[safe_mode](https://secure.php.net/manual/en/features.safe-mode.php)]
+- `magic_quotes_gpc = off` - (PHP <= v5.4 için) SQL Injection'a (SQLi) izin verir [[magic_quotes_gpc](https://secure.php.net/manual/en/security.magicquotes.php)]
+- `display_errors = off` - (İsteğe bağlı) PHP uyarı mesajlarını gizler [[display_errors](https://secure.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)]
 
 **Dosya: `config/config.inc.php`**:
 
-* `$_DVWA[ 'recaptcha_public_key' ]` & `$_DVWA[ 'recaptcha_private_key' ]` - Bu değerler şuradan oluşturulmalı: https://www.google.com/recaptcha/admin/create
+- `$_DVWA[ 'recaptcha_public_key' ]` & `$_DVWA[ 'recaptcha_private_key' ]` - Bu değerler şuradan oluşturulmalı: https://www.google.com/recaptcha/admin/create
 
 ### Varsayılan Giriş Bilgileri
 
@@ -147,7 +148,7 @@ Giriş URL'i: http://127.0.0.1/login.php
 
 _Not: DVWA'yı farklı bir dizine kurduysanız, URL değişecektir._
 
-- - -
+---
 
 ## Docker Container
 
@@ -157,13 +158,14 @@ _Not: DVWA'yı farklı bir dizine kurduysanız, URL değişecektir._
 
 Lütfen, önceki MySQL sorunları nedeniyle aufs kullandığınızdan emin olun. Depolama sürücünüzü kontrol etmek için `docker info` çalıştırın. aufs değilse, lütfen değiştirin. Her işletim sistemi için bunu nasıl yapacağınıza dair dokümanlar mevcut. Ancak farklılık gösterdikleri için bu konuya değinmeyeceğiz.
 
-- - -
+---
 
 ## Sorun Giderme
 
 Bu öneriler; Debian, Ubuntu ve Kali gibi Debian tabanlı bir dağıtım kullandığınızı varsayar. Diğer dağıtımlar için yine bu adımları takip edin ancak gerekli yerlerde komutları değiştirin.
 
 ### Site 404 hatası veriyor
+
 Bu sorunu yaşıyorsanız, dosya konumlarını anlamalısınız. Varsayılan olarak Apache'nin belge kökü (web içeriğini aramaya başladığı konum) `/var/www/html` dizinidir. Bu dizine `hello.txt` dosyası eklerseniz, erişmek için `http://localhost/hello.txt` adresine gitmelisiniz.
 
 Eğer bir dizin oluşturup bu dosyayı o dizin içine eklediyseniz - `/var/www/html/mydir/hello.txt` - o hâlde `http://localhost/mydir/hello.txt` adresine gitmelisiniz.
@@ -206,7 +208,7 @@ Eğer eşleşiyorsa, komut satırından giriş yapıp yapamadığınıza bakın.
 mysql -u dvwa -pp@ssw0rd -D dvwa
 ```
 
-*Not: -p'den sonra boşluk yok*
+_Not: -p'den sonra boşluk yok_
 
 Aşağıdakine benzer bir çıktı görüyorsanız, parola doğrudur:
 
@@ -266,38 +268,38 @@ Alternatif olarak şu adımları takip edin:
 
 2. `[mysqld]` satırının altına aşağıdakini ekleyin:
 
-  `default-authentication-plugin=mysql_native_password`
+`default-authentication-plugin=mysql_native_password`
 
 3. Veri tabanını yeniden başlatın: `sudo service mysql restart`
 4. Veri tabanı kullanıcınız için kimlik doğrulama yöntemini kontrol edin:
 
-    ```sql
-    mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
-    +-----------+------------------+-----------------------+
-    | Host      | User             | plugin                |
-    +-----------+------------------+-----------------------+
-    | localhost | dvwa             | caching_sha2_password |
-    +-----------+------------------+-----------------------+
-    1 rows in set (0.00 sec)
-    ```
+   ```sql
+   mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
+   +-----------+------------------+-----------------------+
+   | Host      | User             | plugin                |
+   +-----------+------------------+-----------------------+
+   | localhost | dvwa             | caching_sha2_password |
+   +-----------+------------------+-----------------------+
+   1 rows in set (0.00 sec)
+   ```
 
-1. Muhtemelen `caching_sha2_password` ifadesini göreceksiniz. Durum böyleyse, aşağıdaki komutu çalıştırın:
+5. Muhtemelen `caching_sha2_password` ifadesini göreceksiniz. Durum böyleyse, aşağıdaki komutu çalıştırın:
 
-    ```sql
-    mysql> ALTER USER dvwa@localhost IDENTIFIED WITH mysql_native_password BY 'p@ssw0rd';
-    ```
+   ```sql
+   mysql> ALTER USER dvwa@localhost IDENTIFIED WITH mysql_native_password BY 'p@ssw0rd';
+   ```
 
-1. Tekrar kontrol ettiğinizda, `mysql_native_password` görmelisiniz.
+6. Tekrar kontrol ettiğinizda, `mysql_native_password` görmelisiniz.
 
-    ```sql
-    mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
-    +-----------+------+-----------------------+
-    | Host      | User | plugin                |
-    +-----------+------+-----------------------+
-    | localhost | dvwa | mysql_native_password |
-    +-----------+------+-----------------------+
-    1 row in set (0.00 sec)
-    ```
+   ```sql
+   mysql> select Host,User, plugin from mysql.user where mysql.user.User = 'dvwa';
+   +-----------+------+-----------------------+
+   | Host      | User | plugin                |
+   +-----------+------+-----------------------+
+   | localhost | dvwa | mysql_native_password |
+   +-----------+------+-----------------------+
+   1 row in set (0.00 sec)
+   ```
 
 Bu adımlardan sonra, kurulum işlemi normal şekilde devam etmelidir.
 
@@ -376,7 +378,7 @@ Eğer bir talep açacaksanız, en azından aşağıdaki bilgileri iletin:
 - Eğer bir veri tabanı kimlik doğrulama sorunu yaşıyorsanız, yukarıdaki adımların her birini tekrar edin ve her adımda ekran görüntüsü alın. Bunları, yapılandırma dosyanızdaki veri tabanı kullanıcı adını ve parolasını gösteren kısmın ekran görüntüsü ile birlikte gönderin.
 - Yanlış giden şeyin tam açıklaması, ne olmasını beklediğiniz ve bunu düzeltmek için neler yaptığınız... "login çalışmıyor", sorununuzu anlayıp düzeltmemiz için yeterli değil.
 
-- - -
+---
 
 ## SQLite3 SQL Injection
 
@@ -397,13 +399,13 @@ Varsayılan olarak `database/sqli.db` dosyasını kullanır. Bu dosyayı batır�
 
 Olay MySQL ile aynı. Sadece SQLite3'e karşı yapılacak.
 
-- - -
+---
 
 ## Bağlantılar
 
 Proje Sayfası: <https://github.com/digininja/DVWA>
 
-*DVWA takımı tarafından oluşturulmuştur*
+_DVWA takımı tarafından oluşturulmuştur_
 
 ## Çeviri
 

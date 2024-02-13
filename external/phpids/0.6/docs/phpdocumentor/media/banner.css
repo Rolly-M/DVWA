@@ -1,32 +1,29 @@
-body 
-{ 
-	background-color: #CCCCFF; 
-	margin: 0px; 
-	padding: 0px;
+body {
+  background-color: #ccccff;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Banner (top bar) classes */
 
-.banner {  }
-
-.banner-menu 
-{ 
-	clear: both;
-	padding: .5em;
-	border-top: 2px solid #6666AA;	
+.banner {
 }
 
-.banner-title 
-{ 
-	text-align: right; 
-	font-size: 20pt; 
-	font-weight: bold; 
-	margin: .2em;
+.banner-menu {
+  clear: both;
+  padding: 0.5em;
+  border-top: 2px solid #6666aa;
 }
 
-.package-selector 
-{ 
-	background-color: #AAAADD; 
-	border: 1px solid black; 
-	color: yellow;
+.banner-title {
+  text-align: right;
+  font-size: 20pt;
+  font-weight: bold;
+  margin: 0.2em;
+}
+
+.package-selector {
+  background-color: #aaaadd;
+  border: 1px solid black;
+  color: yellow;
 }
